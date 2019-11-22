@@ -59,6 +59,22 @@
         </service>
 
         <service
+            android:name=".fpsinfo.FPSInfoService"
+            android:exported="false">
+        </service>
+
+        <service
+            android:name=".fpsinfo.FPSTileService"
+            android:icon="@drawable/ic_fps"
+            android:label="@string/fps_info_title"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action
+                    android:name="android.service.quicksettings.action.QS_TILE"/>
+            </intent-filter>
+        </service>
+
+        <service
             android:name=".display.DcDimmingTileService"
             android:icon="@drawable/ic_dc_tile"
             android:label="@string/dc_dimming_enable_title"
