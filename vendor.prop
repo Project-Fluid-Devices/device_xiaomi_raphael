@@ -110,11 +110,11 @@ vendor.qcom.bluetooth.soc=cherokee
 # Camera
 persist.camera.gyro.disable=0
 camera.disable_zsl_mode=true
-	
+
 # Data modules
 persist.vendor.data.mode=concurrent
 persist.vendor.data.iwlan.enable=true
-	
+
 # Display
 vendor.display.comp_mask=0
 vendor.display.dataspace_saturation_matrix=1.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,1.0
@@ -128,7 +128,7 @@ vendor.display.enable_default_color_mode=1
 vendor.display.enable_null_display=0
 vendor.display.enable_optimize_refresh=1
 debug.hwui.renderer=skiavk
-	
+
 # FRP
 ro.frp.pst=/dev/block/bootdevice/by-name/frp
 
@@ -148,7 +148,7 @@ ro.hardware.egl=adreno
 ro.opengles.version=196610
 ro.hardware.vulkan=adreno
 vendor.gralloc.disable_ubwc=0
-	
+
 # IMS
 persist.dbg.volte_avail_ovr=1
 persist.dbg.vt_avail_ovr=1
@@ -178,10 +178,13 @@ persist.vendor.sensors.enable.mag_filter=true
 persist.vendor.uspsensor=default
 
 # SurfaceFlinger
-debug.sf.early_phase_offset_ns=500000
-debug.sf.early_app_phase_offset_ns=500000
-debug.sf.early_gl_phase_offset_ns=3000000
-debug.sf.early_gl_app_phase_offset_ns=15000000
+debug.sf.use_phase_offsets_as_durations=1
+debug.sf.late.sf.duration=10500000
+debug.sf.late.app.duration=20500000
+debug.sf.early.sf.duration=21000000
+debug.sf.early.app.duration=16500000
+debug.sf.earlyGl.sf.duration=13500000
+debug.sf.earlyGl.app.duration=21000000
 
 # Target specific Netflix custom property
 ro.netflix.bsp_rev=Q855-16947-1
