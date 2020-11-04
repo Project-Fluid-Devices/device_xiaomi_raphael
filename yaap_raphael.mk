@@ -25,11 +25,7 @@ scr_resolution := 1080
 PRODUCT_NAME := yaap_raphael
 PRODUCT_DEVICE := raphael
 PRODUCT_BRAND := Xiaomi
-PRODUCT_MODEL := MI 9T Pro
+PRODUCT_MODEL := Redmi K20 Pro
 PRODUCT_MANUFACTURER := Xiaomi
-
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRODUCT_NAME="raphael" \
-    TARGET_DEVICE="raphael"
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi

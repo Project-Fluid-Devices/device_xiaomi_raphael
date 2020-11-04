@@ -28,10 +28,12 @@
 #include <stdlib.h>
 #define _REALLY_INCLUDE_SYS__SYSTEM_PROPERTIES_H_
 #include <sys/_system_properties.h>
+#include <sys/stat.h>
 #include <sys/sysinfo.h>
+#include <sys/types.h>
 
-#include <android-base/properties.h>
 #include "vendor_init.h"
+#include <android-base/properties.h>
 
 void property_override(char const prop[], char const value[])
 {
@@ -78,17 +80,19 @@ void vendor_load_properties()
 {
     std::string region = android::base::GetProperty("ro.boot.hwc", "");
 
-    // correct model naming
-    if (region.find("CN") != std::string::npos ||
-        region.find("INDIA") != std::string::npos) {
-        property_override("ro.product.model", "Redmi K20 Pro");
-    } else {
-        property_override("ro.product.model", "Mi 9T Pro");
-    }
+  // correct model naming
+  if (region.find("CN") != std::string::npos) {
+    property_override("ro.product.model", "Redmi K20 Pro");
+  } else if (region.find("INDIA") != std::string::npos) {
+    property_override("ro.product.model", "Redmi K20 Pro");
+    property_override("ro.product.device", "raphaelin");
+  } else if (region.find("GLOBAL") != std::string::npos) {
+    property_override("ro.product.model", "Mi 9T Pro");
+  }
 
     // fingerprint
-    property_override("ro.build.description", "coral-user 11 RP1A.201105.002 6869500 release-keys");
-    property_override_multi("ro.build.fingerprint", "ro.vendor.build.fingerprint","ro.bootimage.build.fingerprint", "google/coral/coral:11/RP1A.201105.002/6869500:user/release-keys");
+    property_override("ro.build.description", "raphael-user 10 QKQ1.190825.002 20.10.15 release-keys");
+    property_override_multi("ro.build.fingerprint", "ro.vendor.build.fingerprint","ro.bootimage.build.fingerprint", "google/walleye/walleye:8.1.0/OPM1.171019.011/4448085:user/release-keys");
 
     load_dalvikvm_properties();
 }
