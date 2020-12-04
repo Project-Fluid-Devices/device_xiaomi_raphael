@@ -11,12 +11,6 @@
     },
     {
         "remote":       "github",
-        "repository":   "yaap/vendor_qcom_opensource_vibrator",
-        "target_path":  "vendor/qcom/opensource/vibrator",
-        "branch":       "eleven"
-    },
-    {
-        "remote":       "github",
         "repository":   "ShapeShiftOS/android_hardware_qcom_media",
         "target_path":  "hardware/qcom-caf/sm8150/media",
         "branch":       "android_11-caf-sm8150"
