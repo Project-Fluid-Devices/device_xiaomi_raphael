@@ -18,4 +18,7 @@
 
     <!-- Device specific doze package -->
     <string name="config_customDozePackage">com.custom.ambient.display/com.custom.ambient.display.DozeSettings</string>
+
+    <!-- Whether to show Selinux status in Settings -->
+    <bool name="config_showSelinuxStatus">false</bool>
 </resources>
