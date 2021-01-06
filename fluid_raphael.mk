@@ -26,9 +26,14 @@ PRODUCT_MODEL := Redmi K20 Pro
 PRODUCT_MANUFACTURER := Xiaomi
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
-IS_PHONE := true
-TARGET_INCLUDE_GAPPS := true
+
+# GApps
 TARGET_GAPPS_ARCH := arm64
-DISABLE_DEFAULT_CAMERA := true
 TARGET_SUPPORTS_GOOGLE_RECORDER := true
+TARGET_INCLUDE_STOCK_ARCORE := true
+
+# Fluid specific properties
 FLUID_BUILD_TYPE := OFFICIAL
+PRODUCT_PRODUCT_PROPERTIES += \
+  ro.fluid.maintainer=san9 \
+  ro.fluid.cpu=SDM855
