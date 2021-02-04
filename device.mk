@@ -30,9 +30,7 @@ $(call inherit-product-if-exists, vendor/xiaomi/raphael/raphael-vendor.mk)
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
-    $(LOCAL_PATH) \
-    vendor/qcom/opensource/commonsys/packages/apps/Bluetooth \
-    vendor/qcom/opensource/commonsys/system/bt/conf
+    $(LOCAL_PATH)
 
 # Hardware
 PRODUCT_COPY_FILES += \
