@@ -37,7 +37,7 @@ public class BootCompletedReceiver extends BroadcastReceiver {
         DiracUtils.initialize(context);
         DozeUtils.checkDozeService(context);
         PopupCameraUtils.startService(context);
-        ThermalUtils.startService(context);
+        ThermalUtils.initialize(context);
 
     }
 }
