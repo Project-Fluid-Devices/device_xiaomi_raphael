@@ -26,26 +26,8 @@
     },
     {
         "remote":       "github",
-        "repository":   "ShapeShiftOS/android_hardware_qcom_audio",
-        "target_path":  "hardware/qcom-caf/sm8150/audio",
-        "branch":       "android_11-caf-sm8150"
-    },
-    {
-        "remote":       "github",
         "repository":   "san9-s-dumpster/android_hardware_qcom_display",
         "target_path":  "hardware/qcom-caf/sm8150/display",
-        "branch":       "android_11-caf-sm8150"
-    },
-    {
-        "remote":       "github",
-        "repository":   "ShapeShiftOS/android_hardware_qcom_media",
-        "target_path":  "hardware/qcom-caf/sm8150/media",
-        "branch":       "android_11-caf-sm8150"
-    },
-    {
-        "remote":       "github",
-        "repository":   "ShapeShiftOS/android_vendor_qcom_opensource_display-commonsys-intf",
-        "target_path":  "vendor/qcom/opensource/commonsys-intf/display",
-        "branch":       "android_11"
+        "branch":       "fluid-11"
     }
 ]
