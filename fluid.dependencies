@@ -18,16 +18,16 @@
         "branch":       "fluid-11"
     },
     {
+        "remote":	"gitlab",
+	"repository":	"utsavbalar1231/device_xiaomi_raphael-firmware",
+	"target_path":	"device/xiaomi/raphael-firmware",
+	"clone-depth":	"1"
+    },
+    {
         "remote":       "github",
         "repository":   "kdrag0n/proton-clang",
         "clone-depth":  "1",
         "target_path":  "prebuilts/clang/host/linux-x86/clang-proton",
         "branch":       "master"
-    },
-    {
-        "remote":       "github",
-        "repository":   "san9-s-dumpster/android_hardware_qcom_display",
-        "target_path":  "hardware/qcom-caf/sm8150/display",
-        "branch":       "fluid-11"
     }
 ]
